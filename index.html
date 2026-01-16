@@ -60,7 +60,10 @@
         
         .ebook-cover {
             max-width: 400px;
+            width: 100%;
+            height: auto;
             margin: 40px auto;
+            display: block;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             border-radius: 10px;
         }
@@ -222,47 +225,47 @@
         }
         
         .bonus-section {
-            background: linear-gradient(135deg, #2d5016 0%, #3d6b1f 100%);
-            color: white;
-        }
-        
-        .bonus-section .section-title {
-            color: white;
+            background: white;
         }
         
         .bonus-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            margin-top: 40px;
         }
         
         .bonus-card {
-            background: rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, #f8f8f5 0%, #ffffff 100%);
             padding: 30px;
             border-radius: 15px;
-            border: 2px solid rgba(255,215,0,0.3);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid #ffd700;
         }
         
         .bonus-card h3 {
-            font-size: 22px;
+            color: #2d5016;
+            font-size: 24px;
             margin-bottom: 10px;
-            color: #ffd700;
         }
         
         .bonus-value {
-            font-size: 18px;
-            color: #ffd700;
+            background: #ffd700;
+            color: #2d5016;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
             font-weight: bold;
             margin-bottom: 15px;
+            font-size: 14px;
         }
         
         .value-calc {
             background: white;
             padding: 40px;
-            border-radius: 15px;
-            margin: 50px auto;
-            max-width: 600px;
-            color: #333;
+            border-radius: 20px;
+            margin-top: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
         
         .value-line {
@@ -270,75 +273,78 @@
             justify-content: space-between;
             padding: 15px 0;
             border-bottom: 1px solid #eee;
+            font-size: 18px;
         }
         
         .value-total {
+            background: #f8f8f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
             font-size: 24px;
             font-weight: bold;
-            color: #2d5016;
-            padding-top: 20px;
-            border-top: 3px solid #2d5016;
         }
         
         .guarantee-section {
-            background: white;
+            background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
             text-align: center;
         }
         
         .guarantee-badge {
-            display: inline-block;
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: #ffd700;
-            color: #2d5016;
+            background: linear-gradient(135deg, #00a878 0%, #2d5016 100%);
+            color: white;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            font-weight: bold;
-            margin: 30px auto;
-            border: 5px solid #2d5016;
+            align-items: center;
+            margin: 40px auto;
+            box-shadow: 0 10px 40px rgba(0,168,120,0.3);
         }
         
         .guarantee-badge .big-text {
-            font-size: 48px;
+            font-size: 72px;
+            font-weight: 900;
             line-height: 1;
         }
         
         .author-section {
-            background: #f8f8f5;
+            background: white;
         }
         
         .author-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: center;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: start;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .author-photo {
             width: 100%;
-            max-width: 300px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
         .faq-section {
-            background: white;
+            background: #f8f8f5;
         }
         
         .faq-item {
-            background: #f8f8f5;
-            padding: 25px;
-            border-radius: 10px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
             margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .faq-item h3 {
             color: #2d5016;
-            margin-bottom: 10px;
             font-size: 20px;
+            margin-bottom: 15px;
         }
         
         .final-cta {
@@ -348,81 +354,83 @@
             padding: 80px 20px;
         }
         
+        .urgency-box {
+            background: rgba(255,215,0,0.2);
+            border: 2px solid #ffd700;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        
+        /* Responsivo */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
             }
             
             .hero h2 {
-                font-size: 18px;
+                font-size: 20px;
             }
             
-            .new-price {
-                font-size: 42px;
+            .section-title {
+                font-size: 28px;
             }
             
             .author-content {
                 grid-template-columns: 1fr;
+                text-align: center;
             }
             
             .cta-button {
                 padding: 15px 30px;
                 font-size: 20px;
             }
+            
+            .new-price {
+                font-size: 42px;
+            }
         }
     </style>
 </head>
 <body>
-    
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="topo">
         <div class="container">
-            <div class="badge">🌱 GUIA COMPLETO 2026 - EDIÇÃO PREMIUM</div>
+            <div class="badge">✨ MÉTODO TESTADO E APROVADO</div>
+            <h1>Hidroponia Caseira:<br>Do Zero ao Primeiro Cultivo em 30 Dias</h1>
+            <h2>Cultive suas próprias hortaliças frescas e orgânicas em casa,<br>mesmo sem espaço, sem experiência e investindo menos de R$ 150</h2>
             
-            <h1>Pare de Jogar R$ 300/Mês no Lixo:<br>
-            Monte Sua Horta em 2 Horas e Colha<br>
-            Alimentos Frescos em 30 Dias</h1>
-            
-            <h2>O Guia Completo de Hidroponia Caseira com 20 Capítulos<br>
-            Que Acaba Com o Desperdício - Sem Terra, Sem Mistério, Sem Complicação</h2>
-            
-            <img src="https://imgur.com/a/QmNoeCU" alt="Capa E-book Hidroponia Caseira" class="ebook-cover">
+            <img src="capa.png" alt="E-book Hidroponia Caseira" class="ebook-cover">
             
             <div class="benefits">
                 <div class="benefit-item">
-                    <h3>⚡ Monte em 2 Horas</h3>
-                    <p>Sistema funcional no mesmo dia</p>
+                    <h3>🌱 Do Básico ao Avançado</h3>
+                    <p>20 capítulos práticos que te guiam passo a passo</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>🌱 Colha em 30 Dias</h3>
-                    <p>Da semente ao prato em 1 mês</p>
+                    <h3>💰 Economia Real</h3>
+                    <p>Sistema completo por menos de R$ 150</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>💰 Economize R$ 200+/mês</h3>
-                    <p>Nunca mais jogue comida fora</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>📚 20 Capítulos Completos</h3>
-                    <p>Do básico ao avançado</p>
+                    <h3>⚡ Resultados em 30 Dias</h3>
+                    <p>Sua primeira colheita em menos de um mês</p>
                 </div>
             </div>
             
             <div class="price-box">
-                <div class="old-price">De R$ 565,00</div>
+                <div class="old-price">De R$ 297,00</div>
                 <div class="new-price">R$ 97,00</div>
                 <div class="installments">ou 10x de R$ 9,70 sem juros</div>
-                <div style="margin: 15px 0; font-size: 18px;">💚 À vista no Pix: R$ 87,00</div>
-                <div style="font-size: 20px; font-weight: bold; color: #ffd700;">
-                    VOCÊ ECONOMIZA R$ 468 (83% OFF!)
+                <div style="color: #ffd700; font-size: 20px; margin-top: 10px;">💚 À vista no Pix: R$ 87,00</div>
+                
+                <a href="#comprar" class="cta-button">QUERO COMEÇAR AGORA →</a>
+                
+                <div class="trust-badges">
+                    <div class="trust-item">🔒 Compra 100% Segura</div>
+                    <div class="trust-item">✅ Acesso Imediato</div>
+                    <div class="trust-item">💚 Garantia 30 Dias</div>
                 </div>
-            </div>
-            
-            <a href="#comprar" class="cta-button">QUERO COMEÇAR AGORA →</a>
-            
-            <div class="trust-badges">
-                <div class="trust-item">🔒 Compra 100% Segura</div>
-                <div class="trust-item">⚡ Acesso Imediato</div>
-                <div class="trust-item">✓ Garantia 30 Dias</div>
             </div>
         </div>
     </section>
@@ -430,86 +438,100 @@
     <!-- PROBLEMA -->
     <section class="problem-section">
         <div class="container">
-            <h2 class="section-title">Você Reconhece Esses Problemas?</h2>
+            <h2 class="section-title">Você Está Cansado Disso?</h2>
             
             <div class="problem-grid">
                 <div class="problem-card">
-                    <h3>❌ Alface que murcha na geladeira</h3>
-                    <p>Compra no mercado e 3 dias depois tá estragando. R$ 12 no lixo.</p>
+                    <h3>🥬 Hortaliças Caras e Sem Sabor</h3>
+                    <p>Paga caro no mercado e ainda leva para casa verduras sem gosto, cheias de agrotóxicos e que murcham em dias.</p>
                 </div>
+                
                 <div class="problem-card">
-                    <h3>❌ Tomates que apodrecem</h3>
-                    <p>Você nem chegou a usar. Mais R$ 15 desperdiçados.</p>
+                    <h3>🏡 Sem Espaço Para Horta</h3>
+                    <p>Mora em apartamento ou tem apenas uma varanda pequena. Acha que cultivar é impossível no seu espaço.</p>
                 </div>
+                
                 <div class="problem-card">
-                    <h3>❌ Temperos que você esquece</h3>
-                    <p>Salsinha, cebolinha... Quando lembra, já secou tudo.</p>
+                    <h3>❌ Tentou e Não Deu Certo</h3>
+                    <p>Já comprou sementes, plantou na terra, mas as plantas morreram. Pragas, solo ruim, falta de conhecimento.</p>
                 </div>
+                
                 <div class="problem-card">
-                    <h3>❌ Conta do mercado nas alturas</h3>
-                    <p>R$ 300+ por mês em verduras e legumes que você desperdiça 40%.</p>
+                    <h3>⏰ Falta de Tempo</h3>
+                    <p>Trabalha, tem família, mil compromissos. Precisa de algo prático que não tome horas do seu dia.</p>
                 </div>
             </div>
             
-            <div style="text-align: center; margin: 60px 0;">
-                <h3 style="font-size: 32px; color: #2d5016; margin-bottom: 30px;">
-                    E Se Você Pudesse...
-                </h3>
-            </div>
+            <h2 class="section-title" style="margin-top: 80px;">E Se Você Pudesse...</h2>
             
             <div class="problem-grid">
                 <div class="solution-card">
-                    <h3>✓ Colher na hora que for usar</h3>
-                    <p>Alface fresca direto da sua horta pra salada. Zero desperdício.</p>
+                    <h3>✨ Colher Alface Minutos Antes do Almoço</h3>
+                    <p>Frescor máximo, sabor incomparável, zero agrotóxicos. Do cultivo direto pro prato.</p>
                 </div>
+                
                 <div class="solution-card">
-                    <h3>✓ Ter temperos infinitos</h3>
-                    <p>Salsinha, manjericão, hortelã sempre à mão. Só colhe o que precisa.</p>
+                    <h3>📦 Cultivar Numa Varanda de 2m²</h3>
+                    <p>Sistema vertical que produz mais que uma horta tradicional de 8m². Cabe em qualquer apartamento.</p>
                 </div>
+                
                 <div class="solution-card">
-                    <h3>✓ Economizar R$ 200+ por mês</h3>
-                    <p>Pare de jogar dinheiro fora. Cultive o que consome.</p>
+                    <h3>🎯 Ter 90% de Taxa de Sucesso</h3>
+                    <p>Método passo a passo, testado e aprovado. Sem errar, sem desperdiçar dinheiro.</p>
                 </div>
+                
                 <div class="solution-card">
-                    <h3>✓ Cultivar mesmo em apartamento</h3>
-                    <p>Sem terra, sem sujeira, sem espaço gigante. Funciona em qualquer canto.</p>
+                    <h3>⚡ Manutenção de 10 Minutos/Dia</h3>
+                    <p>Sistema simples e eficiente que cabe na sua rotina sem complicação.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- SOLUÇÃO -->
+    <!-- MÓDULOS -->
     <section class="modules-section">
         <div class="container">
-            <h2 class="section-title">Apresento: Hidroponia Caseira</h2>
-            <p style="text-align: center; font-size: 20px; max-width: 800px; margin: 0 auto 50px;">
-                O guia completo que te leva do zero absoluto ao primeiro cultivo em 30 dias. 
-                20 capítulos desenvolvidos por Cristina Marino, Técnica em Agropecuária com 8+ anos de experiência.
+            <h2 class="section-title">O Que Você Vai Aprender</h2>
+            <p style="text-align: center; font-size: 20px; margin-bottom: 50px;">
+                20 capítulos práticos divididos em 7 partes essenciais
             </p>
             
             <div class="modules-grid">
                 <div class="module-card">
-                    <h3>📚 PARTE 1: FUNDAMENTOS</h3>
-                    <p>Entenda por que hidroponia é a solução e monte seu primeiro sistema em apenas 2 horas</p>
+                    <h3>🌟 PARTE 1: FUNDAMENTOS</h3>
+                    <p>Entenda a base da hidroponia e por que ela funciona tão bem</p>
                     <ul class="module-chapters">
+                        <li>Introdução - A Revolução Silenciosa</li>
                         <li>Por Que Hidroponia Faz Sentido</li>
-                        <li>Os 4 Sistemas Que Você Precisa Conhecer</li>
-                        <li>Monte Seu Primeiro Sistema em 2 Horas</li>
+                        <li>Os 4 Sistemas Principais (e qual escolher)</li>
                     </ul>
                 </div>
                 
                 <div class="module-card">
-                    <h3>🌱 PARTE 2: PLANTAS & NUTRIÇÃO</h3>
-                    <p>Da semente à planta adulta: germinação e o "combustível" que suas plantas precisam</p>
+                    <h3>🛠️ PARTE 2: CONSTRUÇÃO PRÁTICA</h3>
+                    <p>Monte seu primeiro sistema passo a passo, com lista de materiais e custos exatos</p>
                     <ul class="module-chapters">
-                        <li>Sementes, Germinação e Mudas</li>
-                        <li>Solução Nutritiva - O Combustível das Plantas</li>
+                        <li>Materiais e Onde Comprar</li>
+                        <li>Seu Primeiro Sistema (passo a passo com fotos)</li>
+                        <li>Testando e Ajustando</li>
+                        <li>Preparando as Mudas</li>
+                        <li>Transplante e Primeiros Dias</li>
                     </ul>
                 </div>
                 
                 <div class="module-card">
-                    <h3>☀️ PARTE 3: CONDIÇÕES PERFEITAS</h3>
-                    <p>Luz, oxigenação e temperatura: crie o ambiente ideal para crescimento máximo</p>
+                    <h3>💧 PARTE 3: NUTRIÇÃO DAS PLANTAS</h3>
+                    <p>Aprenda a alimentar suas plantas corretamente</p>
+                    <ul class="module-chapters">
+                        <li>Nutrientes - O Que Plantas Realmente Precisam</li>
+                        <li>Solução Nutritiva na Prática</li>
+                        <li>pH e EC - Desmistificado</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <h3>☀️ PARTE 4: CONDIÇÕES PERFEITAS</h3>
+                    <p>Luz, oxigenação e temperatura: crie o ambiente ideal</p>
                     <ul class="module-chapters">
                         <li>Luz - O Motor do Crescimento</li>
                         <li>Oxigenação - O Ar Que as Raízes Precisam</li>
@@ -518,8 +540,8 @@
                 </div>
                 
                 <div class="module-card">
-                    <h3>🔧 PARTE 4: MANUTENÇÃO</h3>
-                    <p>Resolva problemas antes que aconteçam e controle pragas naturalmente</p>
+                    <h3>🔧 PARTE 5: MANUTENÇÃO</h3>
+                    <p>Resolva problemas antes que aconteçam</p>
                     <ul class="module-chapters">
                         <li>Problemas Comuns e Soluções</li>
                         <li>Pragas e Controle Natural</li>
@@ -527,33 +549,24 @@
                 </div>
                 
                 <div class="module-card">
-                    <h3>💰 PARTE 5: COLHEITA & ESCALA</h3>
-                    <p>Colha, propague e descubra o retorno financeiro do seu cultivo</p>
+                    <h3>💰 PARTE 6: COLHEITA & ESCALA</h3>
+                    <p>Colha, propague e veja o retorno do seu investimento</p>
                     <ul class="module-chapters">
                         <li>Colheita e Propagação</li>
                         <li>Escalando Seu Cultivo</li>
-                        <li>Economia e Retorno (veja quanto você economiza!)</li>
-                    </ul>
-                </div>
-                
-                <div class="module-card">
-                    <h3>👨‍👩‍👧‍👦 PARTE 6: PREVENÇÃO & FAMÍLIA</h3>
-                    <p>Evite erros caros e ensine seus filhos a cultivar</p>
-                    <ul class="module-chapters">
-                        <li>Erros Que Custam Caro</li>
-                        <li>Receitas e Combinações</li>
-                        <li>Hidroponia Para Crianças (diferencial único!)</li>
+                        <li>Economia e Retorno (quanto você economiza!)</li>
                     </ul>
                 </div>
                 
                 <div class="module-card">
                     <h3>🚀 PARTE 7: NÍVEL AVANÇADO</h3>
-                    <p>Troubleshooting, diferentes climas e transforme em lifestyle</p>
+                    <p>Troubleshooting, diferentes climas e lifestyle</p>
                     <ul class="module-chapters">
                         <li>Troubleshooting Avançado</li>
                         <li>Hidroponia em Diferentes Climas</li>
                         <li>Levando Para o Próximo Nível</li>
                         <li>Além da Comida - Estilo de Vida</li>
+                        <li>Hidroponia Para Crianças</li>
                     </ul>
                 </div>
             </div>
@@ -710,7 +723,7 @@
             
             <div class="author-content">
                 <div>
-                    <img src="raw.githubusercontent.com/seu-usuario/repo/main/cris.jpg" alt="Cristina Marino" class="author-photo">
+                    <img src="autora.jpg" alt="Cristina Marino" class="author-photo">
                     <p style="text-align: center; margin-top: 15px; color: #666;">
                         <strong>Cristina Marino</strong><br>
                         Técnica em Agropecuária
@@ -720,4 +733,124 @@
                 <div>
                     <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
                         Oi! Eu sou a Cristina, Técnica em Agropecuária formada desde 2016. 
-                        São mais de 8 anos trabalhando com cultivo e ajudando pessoas a produzirem seus próprios
+                        São mais de 8 anos trabalhando com cultivo e ajudando pessoas a produzirem seus próprios alimentos.
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                        Comecei com hidroponia por necessidade. Morava em apartamento, não tinha espaço para horta tradicional, 
+                        mas queria vegetais frescos e sem agrotóxicos na minha mesa.
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                        Testei dezenas de sistemas, desperdicei dinheiro com erros bobos, aprendi na prática o que funciona e o que não funciona. 
+                        E quando finalmente acertei, pensei: <em>"Outras pessoas não precisam passar por tudo isso"</em>.
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                        Este e-book é o resultado de anos de experiência condensados em um método passo a passo, 
+                        testado e aprovado. Sem enrolação, sem teoria desnecessária - apenas o que você realmente precisa 
+                        para ter sucesso.
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; color: #2d5016; font-weight: bold;">
+                        Se eu consegui, você também consegue. E vou te mostrar exatamente como.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <h3>Preciso ter experiência com plantas?</h3>
+                <p>Não! O guia foi criado justamente para iniciantes. Cada passo é explicado detalhadamente, com fotos e ilustrações. 
+                Se você consegue seguir uma receita, consegue fazer hidroponia.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Funciona em apartamento pequeno?</h3>
+                <p>Sim! Um dos sistemas mostrados ocupa apenas 0,5m² e produz 12 plantas. Perfeito para varandas, sacadas ou até dentro de casa com luz artificial.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Quanto custa montar o sistema?</h3>
+                <p>O sistema básico para começar custa entre R$ 100 e R$ 150. No e-book você encontra a lista completa de materiais com links para compra e valores atualizados.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Em quanto tempo vejo resultados?</h3>
+                <p>Você monta o sistema em 1 fim de semana e colhe sua primeira alface em 30-35 dias. Algumas ervas aromáticas ficam prontas ainda mais rápido.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Como recebo o material?</h3>
+                <p>Tudo é digital! Assim que confirmar o pagamento, você recebe instantaneamente no seu e-mail o link para download do e-book (PDF) e todos os bônus.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>E se eu não gostar?</h3>
+                <p>Você tem 30 dias de garantia total. Se não ficar satisfeito, basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA FINAL -->
+    <section class="final-cta" id="comprar">
+        <div class="container">
+            <h2 style="font-size: 42px; margin-bottom: 20px;">Está Pronto Para Transformar Sua Alimentação?</h2>
+            <p style="font-size: 22px; margin-bottom: 40px; opacity: 0.95;">
+                Daqui a 30 dias você pode estar colhendo suas próprias hortaliças frescas, sem agrotóxicos, sem depender do mercado.
+            </p>
+            
+            <div class="urgency-box">
+                <h3 style="margin-bottom: 15px; font-size: 24px;">⚡ OFERTA POR TEMPO LIMITADO</h3>
+                <p style="font-size: 18px; margin-bottom: 10px;">
+                    <strong>De R$ 565,00 por apenas R$ 97,00</strong>
+                </p>
+                <p style="font-size: 16px;">
+                    Esta oferta promocional pode acabar a qualquer momento
+                </p>
+            </div>
+            
+            <div style="background: white; color: #333; padding: 40px; border-radius: 20px; max-width: 600px; margin: 40px auto;">
+                <div style="font-size: 48px; font-weight: 900; color: #2d5016; margin-bottom: 10px;">R$ 97,00</div>
+                <div style="font-size: 20px; margin-bottom: 5px;">ou 10x de R$ 9,70 sem juros</div>
+                <div style="font-size: 18px; color: #00a878; font-weight: bold; margin-bottom: 30px;">💚 À vista no Pix: R$ 87,00</div>
+                
+                <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="cta-button" style="margin: 0;">
+                    GARANTIR MINHA VAGA AGORA →
+                </a>
+                
+                <div style="margin-top: 20px; font-size: 14px; color: #666;">
+                    ✓ Acesso imediato<br>
+                    ✓ Garantia de 30 dias<br>
+                    ✓ Compra 100% segura
+                </div>
+            </div>
+            
+            <p style="font-size: 18px; margin-top: 40px; opacity: 0.9;">
+                Não deixe para depois. A melhor época para plantar foi ontem.<br>
+                A segunda melhor época é agora.
+            </p>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer style="background: #1a1a1a; color: white; padding: 40px 20px; text-align: center;">
+        <div class="container">
+            <p style="margin-bottom: 10px;">© 2026 Hidroponia Caseira - Todos os direitos reservados</p>
+            <p style="font-size: 14px; opacity: 0.7;">
+                Este site não faz parte do Facebook ou Instagram. Não somos patrocinados pelo Facebook ou Instagram de nenhuma forma.
+            </p>
+            <div style="margin-top: 20px;">
+                <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Política de Privacidade</a>
+                <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
